@@ -1,7 +1,11 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from 'react'
 
-function useCurrencyInfo (Currency) {
+function useCurrencyInf0() {
+    const [ data, setData] = useState({})
     useEffect(() => {
-        fetch()
-    }, [])
+        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+        .then(() => res.json())  
+        .then((res) => setData(res) )                 // it is call back function
+
+    })
 }
